@@ -1,5 +1,4 @@
-Rails.application.routes.drow do
-  get 'posts', to: 'posts#index'
-  get 'posts/new', to: 'posts#new'
+Rails.application.routes.draw do
+  root to: 'posts#index'
   post 'posts', to: 'post#create'
 end
