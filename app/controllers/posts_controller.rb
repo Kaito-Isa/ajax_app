@@ -8,11 +8,7 @@ class PostsController < ApplicationController
     post = Post.create(content: params[:content], checked: false)
     render json:{ post: post }
   end
- メモ投稿機能実装
-
-
  
- master
   def checked
     post = Post.find(params[:id])
     if post.checked
@@ -22,14 +18,8 @@ class PostsController < ApplicationController
     end
 
     item = Post.find(params[:id])
- メモ投稿機能実装
+
     render json:{ post: item }
   end
 
-end
-
-    render json: { post: item }
-  end
-
- end
- master
+end 
