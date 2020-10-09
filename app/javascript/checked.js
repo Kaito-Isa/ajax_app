@@ -7,11 +7,7 @@ function check() {
     post.setAttribute("data-load", "true");
     post.addEventListener("click", () => {
       const postId = post.getAttribute("data-id");
- メモ投稿機能実装
-      const XHR = new XMLHttpRequest();　
-
       const XHR = new XMLHttpRequest();
- master
       XHR.open("GET", `/posts/${postId}`, true);
       XHR.responseType = "json";
       XHR.send();
